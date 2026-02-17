@@ -21,7 +21,8 @@
             <span class="logo cursor-pointer" onclick="scrollToSection('home')">
                 <img src="./assets/logo_fondo.png" alt="Logo portafolio" width="100" height="100">
             </span>
-            <input type="checkbox" aria-label="Checkbox para mostrar y quitar hamburger menu"
+            <input id="nav-toggle" type="checkbox"
+                aria-label="Checkbox para mostrar y quitar hamburger menu"
                 class="checkbox xl:hidden">
             <div class="hamburger__lines">
                 <span class="line line1"></span>
@@ -30,12 +31,19 @@
             </div>
             <div class="header__info flex align-items-center gap-3">
                 <ul class="flex flex-column xl:flex-row list-none">
-                    <li onclick="scrollToSection('about')">Sobre mí</li>
-                    <li onclick="scrollToSection('services')">Qué puedo aportar?</li>
-                    <li onclick="scrollToSection('portfolio')">Portafolio</li>
-                    <li onclick="scrollToSection('contact')">Contacto</li>
+                    <li>
+                        <label for="nav-toggle" onclick="scrollToSection('about')">Sobre mí</label>
+                    </li>
+                    <li>
+                        <label for="nav-toggle" onclick="scrollToSection('services')">Qué puedo aportar?</label>
+                    </li>
+                    <li>
+                        <label for="nav-toggle" onclick="scrollToSection('portfolio')">Portafolio</label>
+                    </li>
+                    <li>
+                        <label for="nav-toggle" onclick="scrollToSection('contact')">Contacto</label>
+                    </li>
                 </ul>
-                
             </div>
         </nav>
     </header>

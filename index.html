@@ -1,322 +1,261 @@
 <!DOCTYPE html>
+
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portafolio desarrollador de software">
-    <title>Portafolio</title>
-    <link rel="stylesheet" href="style.css" />
-
-    <link rel="stylesheet" href="https://unpkg.com/primeflex@^3/primeflex.css">
-    <link rel="stylesheet" href="https://unpkg.com/primeflex/themes/saga-blue.css">
-    <script src="https://kit.fontawesome.com/b3f17f1dac.js" crossorigin="anonymous"></script>
-</head>
-
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Portfolio de Dylan Grados: perfil junior de ciberseguridad orientado a SOC, Blue Team y seguridad de sistemas. Proyectos prácticos y contacto." name="description"/>
+<title>Dylan Grados | Portfolio de Ciberseguridad Junior</title>
+<!-- Tipografías -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://unpkg.com/primeflex@^3/primeflex.css" rel="stylesheet"/>
+<link href="https://unpkg.com/primeflex/themes/saga-blue.css" rel="stylesheet"/>
+<!-- style.css va después de PrimeFlex para que nuestros estilos manden -->
+<link href="style.css" rel="stylesheet">
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/b3f17f1dac.js"></script>
+</link></head>
 <body>
-    <!-- HEADER -->
-    <header class="flex w-full fixed top-0 z-1">
-        <nav class="flex justify-content-between w-full navbar">
-            <span class="logo cursor-pointer" onclick="scrollToSection('home')">
-                <img src="./assets/logo_fondo.png" alt="Logo portafolio" width="100" height="100">
-            </span>
-            <input id="nav-toggle" type="checkbox"
-                aria-label="Checkbox para mostrar y quitar hamburger menu"
-                class="checkbox xl:hidden">
-            <div class="hamburger__lines">
-                <span class="line line1"></span>
-                <span class="line line2"></span>
-                <span class="line line3"></span>
-            </div>
-            <div class="header__info flex align-items-center gap-3">
-                <ul class="flex flex-column xl:flex-row list-none">
-                    <li>
-                        <label for="nav-toggle" onclick="scrollToSection('about')">Sobre mí</label>
-                    </li>
-                    <li>
-                        <label for="nav-toggle" onclick="scrollToSection('services')">Qué puedo aportar?</label>
-                    </li>
-                    <li>
-                        <label for="nav-toggle" onclick="scrollToSection('portfolio')">Portafolio</label>
-                    </li>
-                    <li>
-                        <label for="nav-toggle" onclick="scrollToSection('contact')">Contacto</label>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <!--HOME PAGE -->
-    <div class="container">
-        <section id="home"
-            class="home__page flex align-items-center justify-content-center xl\:justify-content-between grid grid-nogutter gap-4">
-            <div class="left__content col-12 xl:col-6">
-                <div class="message__bubble triangle mb-4 md:mb-2">
-                    <div class="message__text p-2 sm:p-3 text-center">
-                        <p>Hola! soy</p>
-                    </div>
-                </div>
-                <h1 class="text-3xl sm:text-5xl md:text-7xl">Dylan Grados</h1>
-                <p class="text-gray-500">
-                    Desarrollador de Software | Especializándome en Ciberseguridad
-                </p>
-                <div class="home__buttons flex align-items-center gap-2 mt-6">
-                    <a href="./assets/CV_DYLAN_2026_EN.pdf" aria-label="Ver curriculum"
-                        class="cursor-pointer border-round-lg no-underline" target="_blank" rel="noopener noreferrer">Ver CV</a>
-                    <button onclick="scrollToSection('portfolio')" aria-label="Deslizar a sección portafolio para mostrar mis trabajos"
-                        class="cursor-pointer border-round-lg">Proyectos</button>
-                </div>
-            </div>
-            <div class="right__content col-9 sm:col-6 xl:col-5">
-                <img src="./assets/foto-02.png" alt="Foto perfil" width="100" height="100">
-            </div>
-        </section>
-        <!--ABOUT ME-->
-        <section id="about" class="about__me w-full min-h-screen flex align-items-center">
-            <div class="aboutMe__content min-h-full flex flex-column md:flex-row pt-8 md:pt-0">
-                <div class="aboutMe__info col-12 md:col-6 md:pr-6 pt-0">
-                    <h1 class="text-3xl md:text-5xl">Sobre mí</h1>
-                    <p class="text-gray-500">Desarrollador software, actualmente especializándome en ciberseguridad.
-                        <br>Mi trayectoria comenzó como artista 3D, y con el avance de la inteligencia artificial decidí dar el paso hacia el desarrollo para entender y crear la tecnología desde dentro.</p>
-                    <div class="knowledge flex flex-column gap-3 mt-5">
-                        <p>CSS 75%</p>
-                        <div class="progress__bar progress__css">
-                            <span></span>
-                        </div>
-                        <p>HTML 80%</p>
-                        <div class="progress__bar progress__html">
-                            <span></span>
-                        </div>
-                        <p>Java 55%</p>
-                        <div class="progress__bar progress__java">
-                            <span></span>
-                        </div>
-                        <p>JavaScript 60%</p>
-                        <div class="progress__bar progress__javaScript">
-                            <span></span>
-                        </div>
-                        <p>Python 65%</p>
-                        <div class="progress__bar progress__python">
-                            <span></span>
-                        </div>
-                    </div>
-                    <div class="hireMe__button pt-4">
-                        <a href="https://mail.google.com/mail/?view=cm&to=grados.vfx@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Enviar mensaje al correo"
-                            class="cursor-pointer no-underline border-round-lg">Contáctame</a>
-                    </div>
+<!-- HEADER -->
+<header class="flex w-full fixed top-0 z-1">
+<nav class="flex justify-content-between w-full navbar">
+<a aria-label="Volver al inicio" class="logo cursor-pointer" href="#home">
+<img alt="Logo portafolio" loading="lazy" src="./assets/logo_fondo.png"/>
+</a>
+<input aria-label="Mostrar u ocultar el menú de navegación" class="checkbox xl:hidden" id="nav-toggle" type="checkbox"/>
+<label aria-label="Abrir o cerrar el menú" class="hamburger__lines" for="nav-toggle" role="button" tabindex="0">
+<span class="line line1"></span>
+<span class="line line2"></span>
+<span class="line line3"></span>
+</label>
+<div class="header__info flex align-items-center gap-3">
+<ul class="flex flex-column xl:flex-row list-none">
+<li>
+<a href="#about">Sobre mí</a>
+</li>
+<li>
+<a href="#services">Competencias</a>
+</li>
+<li>
+<a href="#portfolio">Proyectos</a>
+</li>
+<li>
+<a href="#contact">Contacto</a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<!--HOME PAGE -->
+<div class="container">
+<section class="home__page flex align-items-center justify-content-center xl\:justify-content-between grid grid-nogutter gap-4" id="home">
+<div class="left__content col-12 xl:col-6">
+<div class="message__bubble triangle mb-4 md:mb-2">
+<div class="message__text p-2 sm:p-3 text-center">
+<p>¡Hola! Soy</p>
+</div>
+</div>
+<h1 class="text-3xl sm:text-5xl md:text-7xl">Dylan Grados</h1>
+<p class="text-muted">Ciberseguridad Junior | SOC · Blue Team · Seguridad de sistemas</p>
+<div class="home__buttons flex align-items-center gap-2 mt-6">
+<a aria-label="Ver curriculum" class="cursor-pointer border-round-lg no-underline" href="./assets/CV_DYLAN_2026_ES.pdf" rel="noopener noreferrer" target="_blank">Ver CV</a>
+<a aria-label="Ir a proyectos" class="cursor-pointer border-round-lg" href="#portfolio">Proyectos</a>
+</div>
+</div>
+<div class="right__content col-9 sm:col-6 xl:col-5">
+<img alt="Fotografía de Dylan Grados" loading="lazy" src="./assets/foto-02.png"/>
+</div>
+</section>
+<!--ABOUT ME-->
+<section class="about__me w-full min-h-screen flex align-items-center" id="about">
+<div class="aboutMe__content min-h-full flex flex-column md:flex-row pt-8 md:pt-0">
+<div class="aboutMe__info col-12 md:col-6 md:pr-6 pt-0">
+<h2 class="text-3xl md:text-5xl">Sobre mí</h2>
+<p class="text-muted">Estoy cursando la especialización en Ciberseguridad en Entornos de las Tecnologías de la Información y cuento con formación previa en Desarrollo de Aplicaciones Multiplataforma (DAM).</p>
+<p class="text-muted">Mi trayectoria comenzó en el 3D y los efectos visuales, trabajando durante años en estudios como MPC en Londres y Storm Studio en Oslo. Después pasé al desarrollo de software para comprender la tecnología desde dentro y, finalmente, a la ciberseguridad.</p>
+<p class="text-muted">Me interesan especialmente la respuesta a incidentes, la investigación de amenazas y entender cómo piensa un atacante. Exploro también la seguridad ofensiva mediante prácticas en Hack The Box.</p>
+<ul class="languages">
+<li>Castellano y catalán nativos</li>
+<li>Inglés B2+/C1</li>
+</ul>
+</div>
+<div class="image col p-0 mt-6 md:mt-0">
+<img alt="Imagen sobre la trayectoria profesional y tecnológica" loading="lazy" src="./assets/foto-AI.png"/>
+</div>
+</div>
+</section>
+</div>
+<!--SERVICES -->
+<div class="container">
+<section class="services min-h-full w-full pb-7" id="services">
+<div class="services__title flex flex-column gap-3 text-center">
+<h2 class="text-3xl md:text-5xl">Competencias técnicas</h2>
+</div>
+<div class="services__card grid mt-6">
+<div class="col-12 md:col-6">
+<div class="card h-full p-4">
+<i class="fa-solid fa-wave-square card__icon"></i>
+<h3>Monitorización y análisis</h3>
+<p class="text-muted">Análisis de tráfico de red y familiarización con herramientas de detección.</p>
+<ul class="skill__tags">
+<li>Wazuh</li>
+<li>Suricata</li>
+<li>Wireshark</li>
+</ul>
+</div>
+</div>
+<div class="col-12 md:col-6">
+<div class="card h-full p-4">
+<i class="fa-solid fa-shield-halved card__icon"></i>
+<h3>Seguridad de sistemas y redes</h3>
+<p class="text-muted">Configuración de sistemas, control de accesos y fortalecimiento de servicios.</p>
+<ul class="skill__tags">
+<li>Linux</li>
+<li>Windows</li>
+<li>SSH</li>
+<li>TCP/IP</li>
+<li>AAA</li>
+</ul>
+</div>
+</div>
+<div class="col-12 md:col-6">
+<div class="card h-full p-4">
+<i class="fa-solid fa-magnifying-glass card__icon"></i>
+<h3>Seguridad ofensiva</h3>
+<p class="text-muted">Reconocimiento, análisis de vulnerabilidades y prácticas en entornos controlados.</p>
+<ul class="skill__tags">
+<li>Nmap</li>
+<li>Burp Suite</li>
+<li>Kali Linux</li>
+<li>Hack The Box</li>
+</ul>
+</div>
+</div>
+<div class="col-12 md:col-6">
+<div class="card h-full p-4">
+<i class="fa-solid fa-code card__icon"></i>
+<h3>Desarrollo de software</h3>
+<p class="text-muted">Fundamentos de programación, desarrollo de aplicaciones y automatización.</p>
+<ul class="skill__tags">
+<li>Python</li>
+<li>Java</li>
+<li>C#</li>
+<li>JavaScript</li>
+<li>SQL</li>
+<li>Bash</li>
+<li>Git</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!--PORTFOLIO -->
+<section class="portfolio min-h-full w-full pb-8 pt-8" id="portfolio">
+<div class="portfolio__title flex flex-column gap-3 text-center">
+<h2 class="text-3xl md:text-5xl">Proyectos</h2>
+<p class="text-muted text-sm md:text-base">Laboratorios de ciberseguridad y proyectos de desarrollo documentados en GitHub: objetivos, herramientas, procedimientos y resultados.</p>
+</div>
+<div class="proyect__gallery flex justify-content-center flex-wrap gap-4 mt-6">
+<a class="project__card forensic" href="https://github.com/gradosvfx/adquisicion-forense-usb" rel="noopener noreferrer" target="_blank">
+<div class="project__media">
+<img alt="Ilustración de adquisición forense de un USB" loading="lazy" src="./assets/ilustracion-adquisicion-forense-usb.png"/>
 
-                </div>
-                <div class="image col p-0 mt-6 md:mt-0">
-                    <img src="./assets/foto-AI.png" alt="Foto relacionado a acerca de mí" width="100" height="100">
-                </div>
-            </div>
-        </section>
-    </div>
-    <!--FREE LANCER SECTION -->
-    <section class="freelancer mb-4 mt-4 min-w-full flex flex-column justify-content-center align-items-center">
-        <p class="text-sm">¿Buscas un desarrollador junior con ganas de aprender y crecer dentro de tu equipo?</p>
-        <h1 class="text-center">Estoy disponible y con ganas de crecer profesionalmente.</h1>
-        <div class="hireMe__button pt-4">
-            <a href="https://mail.google.com/mail/?view=cm&to=grados.vfx@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Enviar mensaje al correo"
-                class="cursor-pointer no-underline border-round-lg">Escríbeme</a>
-        </div>
-    </section>
-    <!--SERVICES -->
-    <div class="container">
-        <section id="services" class="services min-h-full w-full pb-7">
-            <div class="services__title flex flex-column gap-3 text-center">
-                <h1 class="text-3xl md:text-5xl">Qué puedo aportar?</h1>
-                <p class="text-gray-400 text-sm md:text-base">
-                    Desarrollador en formación continua, comprometido, con ganas de aprender y responsable.
-                    <br>Busco una oportunidad dentro de un equipo donde crecer y desarrollar mis habilidades técnicas.
-                </p>
-            </div>
-            <div class="services__card w-full grid grid-nogutter mt-7 gap-5">
-                <div class="card flex align-items-center col-12 sm:col-6 lg:col-4 gap-3 p-2">
-                    <div class="service__logo flex align-items-center justify-content-center">
-                        <i class="fa-brands fa-html5"></i>
-                    </div>
-                    <div class="service__name">
-                        <p>HTML</p>
-                    </div>
-                </div>
-                <div class="card flex align-items-center col-12 sm:col lg:col-4 gap-3 p-2">
-                    <div class="service__logo flex align-items-center justify-content-center ">
-                        <i class="fa-brands fa-css"></i>
-                    </div>
-                    <div class="service__name">
-                        <p>CSS</p>
-                    </div>
-                </div>
-                <div class="card flex align-items-center col-12 sm:col-6 md:col-3 lg:col gap-3 p-2">
-                    <div class="service__logo flex align-items-center justify-content-center ">
-                        <i class="fa-brands fa-java"></i>
-                    </div>
-                    <div class="service__name">
-                        <p>Java</p>
-                    </div>
-                </div>
-                
-                <div class="card flex align-items-center col-12 sm:col md:col lg:col-4 gap-3 p-2">
-                    <div class="service__logo flex align-items-center justify-content-center ">
-                        <i class="fa-brands fa-python"></i>
-                    </div>
-                    <div class="service__name">
-                        <p>Python</p>
-                    </div>
-                </div>
-                <div class="card flex align-items-center col-12 sm:col-6 md:col-4 lg:col-4 gap-3 p-2">
-                    <div class="service__logo flex align-items-center justify-content-center ">
-                        <i class="fa-solid fa-mobile-screen-button"></i>
-                    </div>
-                    <div class="service__name">
-                        <p>Desarrollo Móvil</p>
-                    </div>
-                </div>
-                <div class="card flex align-items-center col-12 sm:col md:col-4 lg:col gap-3 p-2">
-                    <div class="service__logo flex align-items-center justify-content-center ">
-                        <i class="fa-solid fa-code"></i>
-                    </div>
-                    <div class="service__name">
-                        <p>Desarrollo web</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!--PORTFOLIO -->
-        <section id="portfolio" class="portfolio min-h-full w-full pb-8 pt-8">
-            <div class="portfolio__title flex flex-column gap-3 text-center">
-                <h1 class="text-3xl md:text-5xl">Mis proyectos personales</h1>
-                <p class="text-gray-400 text-sm md:text-base">
-                    Actualmente estoy desarrollando pequeños proyectos y ejercicios prácticos para reforzar mis bases en programación.
-                    Cada proyecto forma parte de mi proceso de aprendizaje y consolidación como desarrollador.
-                </p>
-            </div>
-            <div class="portfolio__gallery">
-                <div class="gallery__categories mb-5 mt-5">
-                    <ul class="flex list-none flex-wrap justify-content-center gap-3">
-                        <li class="filter-item active" data-filter="all">Todos</li>
-                        <li class="filter-item " data-filter="password">Generador de contraseñas</li>
-                        <li class="filter-item " data-filter="2fa">SSH seguro con 2FA</li>
-                        <li class="filter-item " data-filter="ticketForm">Formulario</li>
-                        
-                    </ul>
-                </div>
-                <div class="proyect__gallery flex justify-content-center align-items-center flex-wrap gap-3">
-                    <div class="project__card password">
-                        <img src="./assets/proyecto-1_cut.jpg" alt="">
-                        <div class="overlay"></div>
-                        <div
-                            class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
-                            <h2>Generador de contraseñas</h2>
-                            <p>Proyecto en Java que implementa una comunicación cliente-servidor
-                            </p>
-                            <span>
-                                <a href="https://github.com/gradosvfx/passwordGenerator-client-server" target="_blank" rel="noopener noreferrer">
-                                <i class="fa-solid fa-arrow-right-long"></i>
-                                </a>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="project__card 2fa">
-                        <img src="./assets/2FA+SSH.png" alt="">
-                        <div class="overlay"></div>
-                        <div
-                            class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
-                            <h2>SSH seguro con 2FA</h2>
-                            <p>Implementación de hardening básico en SSH mediante autenticación en dos factores (PAM + TOTP) en Ubuntu Server</p>
-                            <span>
-                                <a href="https://github.com/gradosvfx/secure-ssh-2fa-ubuntu" target="_blank" rel="noopener noreferrer">
-                                <i class="fa-solid fa-arrow-right-long"></i>
-                                </a>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="project__card ticketForm">
-                        <img src="./assets/proyecto-2.jpg" alt="">
-                        <div class="overlay"></div>
-                        <div
-                            class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
-                            <h2>Formulario</h2>
-                            <p>Ticket purchase web form (HTML, CSS, JavaScript)
-                            </p>
-                            <span>
-                                <a href="https://github.com/gradosvfx/ticket-form-validation" target="_blank" rel="noopener noreferrer">
-                                <i class="fa-solid fa-arrow-right-long"></i>
-                                </a>
-                            </span>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
-        <!--FOOTER -->
-        <footer id="contact" class="min-h-full w-full flex grid col-12 justify-content-center pb-8 pt-8 lg:text-center">
-            <div class="social__media col-12 md:col-4 flex flex-column justify-content-between">
-                <h3>Redes sociales</h3>
-                <p>Desarrollador de software.</p>
-                <p>Interesado en ciberseguridad.</p>
-                <div class="social__mediaIcons mt-5 flex lg:justify-content-center gap-3">
-                    <a href="https://www.linkedin.com/in/gradosvfx/" target="_blank" rel="noopener noreferrer" aria-label="Ir a linkedin">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="contact col-12 sm:col-6 sm:pt-0 md:pt-2 md:col-4 flex flex-column justify-content-between md:align-items-center">
-                <h3>Contacto</h3>
-                <div class="phone__number flex align-items-center gap-2">
-                    <i class="fa-solid fa-phone"></i>
-                    <p>+34 616525140</p>
-                </div>
-                <div class="email flex align-items-center gap-2">
-                    <i class="fa-solid fa-envelope"></i>
-                    <p>grados.vfx@gmail.com</p>
-                </div>
-                <a href="https://mail.google.com/mail/?view=cm&to=grados.vfx@gmail.com" target="_blank" rel="noopener noreferrer"
-                    class="cursor-pointer text-center col-4 sm:col-6 xl:col-4 mt-3 no-underline border-round-lg">
-                    <span>
-                        <i class="fa-solid fa-message"></i>
-                    </span>Escríbeme
-                </a>
-            </div>
-            <div class="my__services col-12 sm:col-6 sm:p-0 md:col-4 md:pt-2 md:align-items-center flex flex-column justify-content-between">
-                <h3>Áreas de interés</h3>
-                <p>Desarrollo web</p>
-                <p>Desarrollo móvil</p>
-                <P>3D y entornos Digitales</P>
-                
-            </div>
-        </footer>
-    </div>
+</div>
+<div class="project__caption">
+<h2>Adquisición forense USB</h2><p class="project__description">Adquisición de una memoria USB con bloqueo de escritura y verificación de integridad mediante hashes MD5 y SHA-256.</p>
+<p class="project__tags">Forense · Integridad · MD5 / SHA-256</p>
+<span class="project__link"><i class="fa-brands fa-github"></i> Ver en GitHub</span>
+</div>
+</a>
+<a class="project__card" href="https://github.com/gradosvfx/secure-ssh-2fa-ubuntu" rel="noopener noreferrer" target="_blank">
+<div class="project__media">
+<img alt="Ilustración de SSH con 2FA" loading="lazy" src="./assets/2FA+SSH.png"/>
 
-</body>
+
+</div>
+<div class="project__caption">
+<h2>SSH seguro con 2FA</h2><p class="project__description">Hardening básico de SSH en Ubuntu Server con autenticación en dos factores mediante PAM y TOTP.</p>
+<p class="project__tags">Linux · SSH · PAM · TOTP</p>
+<span class="project__link"><i class="fa-brands fa-github"></i> Ver en GitHub</span>
+</div>
+</a>
+<a class="project__card" href="https://github.com/gradosvfx/passwordGenerator-client-server" rel="noopener noreferrer" target="_blank">
+<div class="project__media">
+<img alt="Ilustración del generador de contraseñas" loading="lazy" src="./assets/proyecto-1_cut.jpg"/>
+
+
+</div>
+<div class="project__caption">
+<h2>Generador de contraseñas</h2><p class="project__description">Aplicación en Java con arquitectura cliente-servidor para generar contraseñas.</p>
+<p class="project__tags">Java · Cliente-servidor</p>
+<span class="project__link"><i class="fa-brands fa-github"></i> Ver en GitHub</span>
+</div>
+</a>
+<a class="project__card" href="https://github.com/gradosvfx/ticket-form-validation" rel="noopener noreferrer" target="_blank">
+<div class="project__media">
+<img alt="Ilustración del formulario web" loading="lazy" src="./assets/ilustracion-formulario.png"/>
+
+
+</div>
+<div class="project__caption">
+<h2>Formulario de compra de entradas</h2><p class="project__description">Formulario web de compra de entradas con validación de datos en JavaScript.</p>
+<p class="project__tags">HTML · CSS · JavaScript</p>
+<span class="project__link"><i class="fa-brands fa-github"></i> Ver en GitHub</span>
+</div>
+</a>
+</div>
+</section>
+</div>
+<!--FREE LANCER SECTION -->
+<section class="freelancer mb-4 mt-4 min-w-full flex flex-column justify-content-center align-items-center">
+<p class="text-sm">Busco mi primera oportunidad profesional en ciberseguridad.</p>
+<h2 class="text-center">Interesado en SOC, análisis de incidentes y seguridad de sistemas.</h2>
+<div class="hireMe__button pt-4">
+<a aria-label="Enviar mensaje al correo" class="cursor-pointer no-underline border-round-lg" href="mailto:grados.vfx@gmail.com">Escríbeme</a>
+</div>
+</section>
+<div class="container">
+<!--FOOTER -->
+<footer class="min-h-full w-full flex grid col-12 justify-content-center pb-8 pt-8 lg:text-center" id="contact">
+<div class="social__media col-12 md:col-6 flex flex-column align-items-start lg:align-items-center gap-3">
+<h3>Redes</h3>
+<p>Conoce mis proyectos técnicos y mi trayectoria profesional.</p>
+<div class="contact__buttons flex flex-wrap gap-3 mt-2">
+<a aria-label="Ir a LinkedIn" class="btn__outline no-underline border-round-lg" href="https://www.linkedin.com/in/gradosvfx/" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-linkedin-in"></i> LinkedIn
+</a>
+<a aria-label="Ir a GitHub" class="btn__outline no-underline border-round-lg" href="https://github.com/gradosvfx" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-github"></i> GitHub
+</a>
+</div>
+</div>
+<div class="contact__col col-12 md:col-6 flex flex-column align-items-start lg:align-items-center gap-3 mt-5 md:mt-0">
+<h3>Contacto</h3>
+<p class="contact__email">grados.vfx@gmail.com</p>
+<div class="contact__buttons flex flex-wrap gap-3 mt-2">
+<a aria-label="Enviar correo a grados.vfx@gmail.com" class="btn__primary no-underline border-round-lg" href="mailto:grados.vfx@gmail.com">
+<i class="fa-solid fa-envelope"></i> Contactar
+</a>
+</div>
+</div>
+</footer>
+</div>
 <script>
-    const filterContainer = document.querySelector(".gallery__categories");
-    const galleryItems = document.querySelectorAll(".project__card");
-
-    filterContainer.addEventListener("click", (event) => {
-        if (event.target.classList.contains("filter-item")) {
-            filterContainer.querySelector(".active").classList.remove("active");
-            event.target.classList.add("active")
-            const filterValue = event.target.getAttribute("data-filter")
-            galleryItems.forEach(item => {
-                if (item.classList.contains(filterValue) || filterValue === "all") {
-                    item.classList.remove("hide")
-                    item.classList.add("show")
-                } else {
-                    item.classList.remove("show")
-                    item.classList.add("hide")
-                }
-            })
-        }
-    })
-
-    function scrollToSection(sectionId){
-        document.getElementById(sectionId).scrollIntoView({behavior:"smooth"})
-    }
-</script>
+    document.querySelectorAll('.header__info a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('nav-toggle').checked = false;
+      });
+    });
+    const menuToggle = document.querySelector('.hamburger__lines');
+    menuToggle.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        document.getElementById('nav-toggle').click();
+      }
+    });
+</script></body>
 
 </html>
